@@ -1,0 +1,6 @@
+FİLM ATÖLYESİ — Türkçe AI Ses
+
+Android’de denemek için Arena’daki canlı önizlemeyi Chrome’da aç.
+Film fikrini yaz ve “Videoyu AI sesiyle hazırla” düğmesine bas.
+İlk çalıştırmada internet gerekir; Türkçe model yaklaşık 63 MB.
+ZIP kaynak dosyalarını içerir, model ZIP’e dahil değildir. index.html dosyasını çift tıklamak yerine klasörü bir web sunucusundan yayınla (Android erişimi için HTTPS kullan).

@@ -1,0 +1,58 @@
+FİLM ATÖLYESİ — KURULUM VE KULLANIM
+====================================
+
+Bu klasör uygulamanın çalışması için gereken HTML ve Piper JavaScript dosyalarını içerir.
+Türkçe AI ses modeli (.onnx) ZIP dosyasına dahil değildir; ilk kullanımda internetten indirilir.
+
+ANDROID TELEFONDA KULLANIM
+--------------------------
+Android'de index.html dosyasına dokunarak açmak yeterli değildir. Tarayıcı güvenlik
+kuralları nedeniyle uygulamayı HTTPS üzerinden yayınlamak gerekir.
+
+1. ZIP'i açın; içindeki studio klasörünü bulun.
+2. studio klasörünün tamamını bir HTTPS statik site alanına yükleyin.
+   Örnek: GitHub Pages gibi statik site barındırma hizmetleri.
+3. Yayınlanan sitenin adresini Android telefonda Chrome ile açın.
+4. Film fikrini yazın ve "Videoyu AI sesiyle hazırla" düğmesine dokunun.
+5. İlk kullanımda Türkçe Piper modeli ve gerekli çalışma dosyaları indirilir.
+   İndirme sırasında Chrome'u kapatmayın; bağlantı ve boş depolama alanı gerekir.
+6. Hazır olduğunda önizleme başlar. "Videoyu indir" ile WebM video kaydedebilirsiniz.
+
+BİLGİSAYARDA HIZLI DENEME
+------------------------
+Python 3 kuruluysa bu klasörde terminal açın ve şu komutu çalıştırın:
+
+    python -m http.server 8000
+
+Ardından tarayıcıda şu adresi açın:
+
+    http://localhost:8000
+
+Not: Bilgisayarda localhost üzerinden test edilebilir. Android telefondan erişim için
+HTTPS yayın kullanın; aynı Wi-Fi ağında IP adresiyle açmak her zaman yeterli olmayabilir.
+
+ÖZELLİKLER
+----------
+- Dört sahneli, yaklaşık 32 saniyelik animasyonlu video taslağı.
+- Türkçe Piper AI seslendirmesi; ilk kullanımda internet gerekir.
+- AI ses yüklenemezse tarayıcının Türkçe konuşma sesi yedek olarak denenir.
+- Sahne metni, atmosfer, görsel ve ses efekti düzenleme.
+- WebM video dışa aktarma.
+
+SINIRLAMALAR
+------------
+- Uygulama metinden özgün AI görüntüsü üretmez; sahneleri Canvas animasyonlarıyla oluşturur.
+- AI ses modeli ZIP içinde değildir ve ilk kullanımda çevrimiçi indirilir.
+- Video indirme, tarayıcının WebM/MediaRecorder desteğine bağlıdır.
+- Bu sürümün JavaScript sözdizimi kontrolü yapıldı; gerçek AI model indirme ve ses üretimi
+  canlı ağ, tarayıcı ve cihaz koşullarına bağlıdır.
+
+SORUN GİDERME
+-------------
+- AI ses yüklenmiyorsa Chrome'da HTTPS adresini açın, internet bağlantısını kontrol edin
+  ve sayfayı yenileyin.
+- İlk model indirmesi uzun sürebilir. İndirme bitmeden sayfayı kapatmayın.
+- Türkçe ses listesi boşsa bu cihazda sistem Türkçe sesi bulunmuyor olabilir; AI Piper
+  sesini kullanmayı deneyin.
+- Video kaydı başlamıyorsa güncel Chrome veya Edge deneyin.
+- İndirme başarısızsa siteyi HTTPS üzerinden yeniden yayınlayıp tekrar deneyin.
